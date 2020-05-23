@@ -43,6 +43,7 @@ func (ch *BlackHole) discard() {
 	for {
 		select {
 		case _, open := <-ch.input:
+            // close了
 			if !open {
 				close(ch.length)
 				return

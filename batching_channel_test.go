@@ -2,6 +2,7 @@ package channels
 
 import "testing"
 
+// 类似于生产者，消费者模型
 func testBatches(t *testing.T, ch Channel) {
 	go func() {
 		for i := 0; i < 1000; i++ {
